@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db:
+    build: ./db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: bogotatest
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: qwerty
+      DATABASE_HOST: db
+  # web:
+  #   build: .
+  #   environment:
+  #     DATABASE_HOST: db
+  #     MYSQL_PORT: 3307
+  #     MYSQL_DATABASE: bogotatest
+  #     MYSQL_USER: mysql
+  #     MYSQL_PASSWORD: qwerty
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - db
+  #   restart: on-failure

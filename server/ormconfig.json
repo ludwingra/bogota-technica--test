@@ -1,0 +1,12 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3307,
+  "username": "mysql",
+  "password": "qwerty",
+  "database": "bogotatest",
+  "entities": [
+    "dist/entity/**/*.js"
+  ],
+  "synchronize": true
+}
